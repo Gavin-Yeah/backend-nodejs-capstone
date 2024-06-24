@@ -22,7 +22,8 @@ connectToDatabase().then(() => {
 app.use(express.json());
 
 // Route files
-
+const secondChanceItemsRoutes = require('./routes/secondChanceItemsRoutes');
+app.use('/api/secondChance/items',secondChanceItemsRoutes);
 // authRoutes Step 2: import the authRoutes and store in a constant called authRoutes
 //{{insert code here}}
 
